@@ -1,28 +1,43 @@
-/* цвет фона в секции героя и футере #2F303A*/
+/* цвет фона в секции героя и футере #2F303A var(--footer-hero-background) */
 /* цвет фона в хедере #FFFFFF*/
-/* цвет фона на странице #E5E5E5*/
-/* цвет  вторичного фона #F5F4FA*/
+/* цвет фона на странице #E5E5E5 var(--main-background) */
+/* цвет  вторичного фона #F5F4FA var(--second-background) */
 /* цвет шрифта в секции героя #FFFFFF*/
-/* цвет шрифта в заголовках секций и кнопках #212121; */
-/* цвет акцента #2196F3; */
+/* цвет шрифта в заголовках секций и кнопках #212121 var(--title-text-color) */
+/* цвет акцента #2196F3 var(--accent-color) */
 /* цвета в логотипе #2196F3 и #000000 */
-/* цвет номера телефона в хедере и основного текста #757575 */
-/* цвет почты и номера телефона в футере rgba(255, 255, 255, 0.6); */
+/* цвет номера телефона в хедере и основного текста #757575 var(--main-text-color) */
+/* цвет почты и номера телефона в футере rgba(255, 255, 255, 0.6) var(--contact-text-color) */
 
+:root {
+    --main-background: #E5E5E5;
+    --second-background: #F5F4FA;
+    --footer-hero-background: #2F303A;
+    --accent-color: #2196F3;
+    --title-text-color: #212121;
+    --main-text-color: #757575;
+    --contact-text-color: rgba(255, 255, 255, 0.6);
+}
 
-
+body {
+    background-color: var(--main-background);
+    color: var(--main-text-color);
+}
 /* Header */
 .logo-part {
-    color: #2196F3;
+    color: var(--accent-color);
 }
 .site-nav .link {
-    color: #212121;
+    color: var(--title-text-color);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
-    color: #2196F3;
+    color: var(--accent-color);
 }
 
+.site-nav .link .current {
+    color: var(--accent-color);
+}
 /* Hero */
 .hero {
 
@@ -30,5 +45,5 @@
 
 /* Section */
 .section-title {
-color: #212121;
+    color: var(--title-text-color);
 }
