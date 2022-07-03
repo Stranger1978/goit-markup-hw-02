@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title lang="en">HOME WORK 2 page Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -28,12 +29,15 @@
 
     <main>
 <!-- секция с перечнем работ -->
-<section>
+<section class="section">
     <!--we will hide this title later-->
     <h1>Портфолио</h1>
     <!-- список с кнопками-->
     <ul>
-        <li><button type="button" class="button primary">Все</button></li>
+        <!--тут пока поставил клас primary чтобы кнопка была как на макете синей,
+        но в дальнейшем как я понял этот класс уберется и будет динамическое
+        назначение через JS -->
+        <li><button type="button" class="button primary">Все</button></li> 
         <li><button type="button" class="button">Веб-сайты</button></li>
         <li><button type="button" class="button">Приложения</button></li>
         <li><button type="button" class="button">Дизайн</button></li>
@@ -42,16 +46,16 @@
    
 
 <!--список с готовыми проектами из портфолио-->
-    <ul>
-        <li><a href="/"><img src="./images/website_tehnokryak.jpg" alt="работа по созданию веб-сайта Технокряк" width="370"><h2>Технокряк</h2><p>Веб-сайт</p></a></li>
-        <li><a href="/"><img src="./images/design_poster_nba.jpg" alt="работа по созданию постера к матчу НБА" width="370"><h2>Постер <span lang="en">New Orlean vs Golden Star</span></h2><p>Дизайн</p></a></li>
-        <li><a href="/"><img src="./images/app_restaurant.jpg" alt="работа по созданию приложения для ресторана морепродуктов" width="370"><h3>Ресторан <span lang="en">Seafood</span></h2><p>Приложение</p></a></li>
-        <li><a href="/"><img src="./images/marketing_project_prime.jpg" alt="работа по созданию проэкта Основной" width="370"><h2>Проект <span lang="en">Prime</span></h2><p>Маркетинг</p></a></li>
-        <li><a href="/"><img src="./images/app_project_box.jpg" alt="работа по созданию приложения для проэкта Коробки" width="370"><h2>Проект <span lang="en">Boxes</span></h2><p>Приложение</p></a></li>
-        <li><a href="/"><img src="./images/website_inspiration.jpg" alt="работа по созданию сайта Вдохновение не имеет границ" width="370"><h2 lang="en">Inspiration has no Borders</h2><p>Веб-сайт</p></a></li>
-        <li><a href="/"><img src="./images/design_limited_edition.jpg" alt="работа по созданию дизайна для издания Ограниченный випуск" width="370"><h2>Издание <span lang="en">Limited Edition</span></h2><p>Дизайн</p></a></li>
-        <li><a href="/"><img src="./images/marketing_project_lab.jpg" alt="работа по созданию проэкта ЛАБ" width="370"><h2>Проект <span lang="en">LAB</span></h2><p>Маркетинг</p></a></li>
-        <li><a href="/"><img src="./images/app_growing_business.jpg" alt="работа по созданию приложения Растущий бизнес" width="370"><h2 lang="en">Growing Business</h2><p>Приложение</p></a></li>
+    <ul class="projects">
+        <li><a href="./" class="link"><img src="./images/website_tehnokryak.jpg" alt="работа по созданию веб-сайта Технокряк" width="370"><h2 class="title">Технокряк</h2><p>Веб-сайт</p></a></li>
+        <li><a href="./" class="link"><img src="./images/design_poster_nba.jpg" alt="работа по созданию постера к матчу НБА" width="370"><h2 class="title">Постер <span lang="en">New Orlean vs Golden Star</span></h2><p>Дизайн</p></a></li>
+        <li><a href="./" class="link"><img src="./images/app_restaurant.jpg" alt="работа по созданию приложения для ресторана морепродуктов" width="370"><h2 class="title">Ресторан <span lang="en">Seafood</span></h2><p>Приложение</p></a></li>
+        <li><a href="./" class="link"><img src="./images/marketing_project_prime.jpg" alt="работа по созданию проэкта Основной" width="370"><h2 class="title">Проект <span lang="en">Prime</span></h2><p>Маркетинг</p></a></li>
+        <li><a href="./" class="link"><img src="./images/app_project_box.jpg" alt="работа по созданию приложения для проэкта Коробки" width="370"><h2 class="title">Проект <span lang="en">Boxes</span></h2><p>Приложение</p></a></li>
+        <li><a href="./" class="link"><img src="./images/website_inspiration.jpg" alt="работа по созданию сайта Вдохновение не имеет границ" width="370"><h2 class="title" lang="en">Inspiration has no Borders</h2><p>Веб-сайт</p></a></li>
+        <li><a href="./" class="link"><img src="./images/design_limited_edition.jpg" alt="работа по созданию дизайна для издания Ограниченный випуск" width="370"><h2 class="title">Издание <span lang="en">Limited Edition</span></h2><p>Дизайн</p></a></li>
+        <li><a href="./" class="link"><img src="./images/marketing_project_lab.jpg" alt="работа по созданию проэкта ЛАБ" width="370"><h2 class="title">Проект <span lang="en">LAB</span></h2><p>Маркетинг</p></a></li>
+        <li><a href="./" class="link"><img src="./images/app_growing_business.jpg" alt="работа по созданию приложения Растущий бизнес" width="370"><h2 class="title" lang="en">Growing Business</h2><p>Приложение</p></a></li>
     </ul>
 </section>
     </main>

@@ -22,14 +22,34 @@
 body {
     background-color: var(--main-background);
     color: var(--main-text-color);
+    font-family: 'Roboto', sans-serif; /*по всей странице кроме логотипа этот шрифт*/
+    letter-spacing: 0.03em; /*по всей странице кроме хедера и героя интервал 0.03*/
 }
 /* Header */
+/*можно было вместо .header описать характеристики основного шрифта в .site-nav{} и в
+ .header .contact {} на случай если они будут меняться в дальнейшем,
+ но я решил один раз назначить характеристики для всего хедера и для Лого отдельно
+  переназначить шрифт и характеристики*/
+
+.header {
+    background-color: #FFFFFF;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em; /*переназначаем интервал*/
+}
+
 .logo {
     color: #000000;
+    font-family: 'Raleway'; /*переназначаем шрифт*/
+    font-size: 26px;
+    line-height: 1.2; /*переназначаем значение*/
+    letter-spacing: 0.03em; /*так как хедер переназначил это значение на другое, надо его опять назначить*/   
 }
 .logo .logo-part {
     color: var(--accent-color);
 }
+
 .site-nav .link {
     color: var(--title-text-color);
 }
@@ -56,31 +76,90 @@ body {
 .hero {
     background-color: var(--footer-hero-background);
     color: #FFFFFF;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36; /* в макете дизайнер оставил значение в % */
+    letter-spacing: 0.06em;
+    text-align: center;
 }
 
+.hero-title {
+    left: 452px;
+    top: 280px;
+
+}
 /* Buttons */
 .button {
 background-color: var(--second-background);
 color: var(--title-text-color);
+font-family: inherit;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.62; /* дизайнер оставил в макете значение в % */
+cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--accent-color);
+    color: #FFFFFF;   
 }
 
 .button.primary {
     background-color: var(--accent-color);
     color: #FFFFFF;
 }
+.button.primary:hover,
+.button.primary:focus {
+    background-color: var(--second-background);
+    color: var(--title-text-color);
+}
+
+.hero .button {
+    font-weight: 700; /*переназначаем для кнопки */
+    font-size: 16px; /* переназначаем для кнопки */
+    line-height: 1.88; /*в макете дизайнером указано значение в %*/
+    width: 200px;
+    height: 50px;
+    left: 700px;
+    top: 430px;
+}
 /* Section */
 .section-title {
     color: var(--title-text-color);   
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    
 }
 
 /* Features */
+.feature-list {
+    font-size: 14px;
+    line-height: 1.71;
+
+}
+
 .feature-list .title {
     color: var(--title-text-color); 
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
 }
 
 /* Team */
+
+.team-list {
+    font-size: 16px;
+    line-height: 1.19;
+    background-color: var(--second-background);
+}
+
 .team-list .title {
     color: var(--title-text-color);
+    font-weight: 500; /* переназначаем */  
+    font-size: 16px;
 }
 
 
@@ -88,15 +167,40 @@ color: var(--title-text-color);
 .footer {
     background-color: var(--footer-hero-background);
     color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 
 .footer .logo {
     color: #FFFFFF;
+    font-weight: 700; /*переназначаем для Лого */
+    font-size: 26px;  /*переназначаем для Лого */
+    line-height: 1.19; /* переназначаем для Лого */
 }
+
 .footer .contact {
     color: var(--contact-text-color);
 }
+
 .footer .contact:hover,
 .footer .contact:focus {
     color: var(--accent-color);
+}
+
+/*page portfolio without header, footer and buttons*/
+ 
+.projects .link{
+    font-size: 16px;
+    line-height: 1.88; /* в макете дизайнер указал значение 188% */
+    color: var(--main-text-color);
+    
+}
+
+.projects .title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
 }
