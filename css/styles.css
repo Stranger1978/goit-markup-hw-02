@@ -42,13 +42,16 @@ body {
     color: var(--accent-color);
 }
 
-.mail {
+.header .contact {
+    color: var(--main-text-color);
+    
+}
+
+.header .contact:hover,
+.header .contact:focus {
     color: var(--accent-color);
 }
 
-.tel {
-    color: var(--main-text-color);
-}
 /* Hero */
 .hero {
     background-color: var(--footer-hero-background);
@@ -90,6 +93,10 @@ color: var(--title-text-color);
 .footer .logo {
     color: #FFFFFF;
 }
-.contact {
+.footer .contact {
     color: var(--contact-text-color);
+}
+.footer .contact:hover,
+.footer .contact:focus {
+    color: var(--accent-color);
 }
