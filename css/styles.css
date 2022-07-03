@@ -1,7 +1,7 @@
 /* цвет фона в секции героя и футере #2F303A var(--footer-hero-background) */
 /* цвет фона в хедере #FFFFFF*/
 /* цвет фона на странице #E5E5E5 var(--main-background) */
-/* цвет  вторичного фона #F5F4FA var(--second-background) */
+/* цвет  вторичного фона и неактивных кнопок #F5F4FA var(--second-background) */
 /* цвет шрифта в секции героя #FFFFFF*/
 /* цвет шрифта в заголовках секций и кнопках #212121 var(--title-text-color) */
 /* цвет акцента #2196F3 var(--accent-color) */
@@ -24,7 +24,10 @@ body {
     color: var(--main-text-color);
 }
 /* Header */
-.logo-part {
+.logo {
+    color: #000000;
+}
+.logo .logo-part {
     color: var(--accent-color);
 }
 .site-nav .link {
@@ -35,15 +38,48 @@ body {
     color: var(--accent-color);
 }
 
-.site-nav .link .current {
+.site-nav .link.current {
     color: var(--accent-color);
 }
+
 /* Hero */
 .hero {
-
+    background-color: var(--footer-hero-background);
+    color: #FFFFFF;
 }
 
+/* Buttons */
+.button {
+background-color: var(--second-background);
+color: var(--title-text-color);
+}
+
+.button.primary {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+}
 /* Section */
 .section-title {
+    color: var(--title-text-color);   
+}
+
+/* Features */
+.feature-list .title {
+    color: var(--title-text-color); 
+}
+
+/* Team */
+.team-list .title {
     color: var(--title-text-color);
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--footer-hero-background);
+    color: #FFFFFF;
+}
+
+.contact {
+    color: var(--contact-text-color);
 }
