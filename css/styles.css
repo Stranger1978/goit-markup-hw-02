@@ -1,6 +1,5 @@
 /* цвет фона в секции героя и футере #2F303A var(--footer-hero-background) */
-/* цвет фона в хедере #FFFFFF*/
-/* цвет фона на странице #E5E5E5 var(--main-background) */
+/* цвет главного фона #FFFFFF*/
 /* цвет  вторичного фона и неактивных кнопок #F5F4FA var(--second-background) */
 /* цвет шрифта в секции героя #FFFFFF*/
 /* цвет шрифта в заголовках секций и кнопках #212121 var(--title-text-color) */
@@ -10,7 +9,7 @@
 /* цвет почты и номера телефона в футере rgba(255, 255, 255, 0.6) var(--contact-text-color) */
 
 :root {
-    --main-background: #E5E5E5;
+    --main-background: #FFFFFF;
     --second-background: #F5F4FA;
     --footer-hero-background: #2F303A;
     --accent-color: #2196F3;
@@ -22,8 +21,7 @@
 body {
     background-color: var(--main-background);
     color: var(--main-text-color);
-    font-family: 'Roboto', sans-serif; /*по всей странице кроме логотипа этот шрифт*/
-    letter-spacing: 0.03em; /*по всей странице кроме хедера и героя интервал 0.03*/
+    font-family: 'Roboto', sans-serif; /*по всей странице кроме логотипа этот шрифт*/      
 }
 /* Header */
 /*можно было вместо .header описать характеристики основного шрифта в .site-nav{} и в
@@ -32,90 +30,72 @@ body {
   переназначить шрифт и характеристики*/
 
 .header {
-    background-color: #FFFFFF;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em; /*переназначаем интервал*/
-}
+   }
 
 .logo {
     color: #000000;
     font-family: 'Raleway'; /*переназначаем шрифт*/
+    font-weight: 700;
     font-size: 26px;
     line-height: 1.2; /*переназначаем значение*/
-    letter-spacing: 0.03em; /*так как хедер переназначил это значение на другое, надо его опять назначить*/   
+    letter-spacing: 0.03em; /*так как хедер переназначил это значение на другое, надо его опять назначить*/
+    text-decoration: none;   
 }
-.logo .logo-part {
+.logo-part {
     color: var(--accent-color);
 }
 
-.site-nav .link {
+.list {
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
     color: var(--title-text-color);
 }
-.site-nav .link:hover,
-.site-nav .link:focus {
+
+.link:hover,
+.link:focus {
     color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.link.current {
     color: var(--accent-color);
 }
 
-.header .contact {
+.header-contact {
     color: var(--main-text-color);
-    
+    text-decoration: none;
 }
 
-.header .contact:hover,
-.header .contact:focus {
+.header-contact:hover,
+.header-contact:focus {
     color: var(--accent-color);
 }
 
 /* Hero */
 .hero {
     background-color: var(--footer-hero-background);
+    
+}
+
+.hero-title {
     color: #FFFFFF;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36; /* в макете дизайнер оставил значение в % */
     letter-spacing: 0.06em;
     text-align: center;
+    text-transform: uppercase;
 }
 
-.hero-title {
-    left: 452px;
-    top: 280px;
-
-}
-/* Buttons */
-.button {
-background-color: var(--second-background);
-color: var(--title-text-color);
-font-family: inherit;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62; /* дизайнер оставил в макете значение в % */
-cursor: pointer;
-}
-
-.button:hover,
-.button:focus {
-    background-color: var(--accent-color);
-    color: #FFFFFF;   
-}
-
-.button.primary {
+.hero-button {
     background-color: var(--accent-color);
     color: #FFFFFF;
-}
-.button.primary:hover,
-.button.primary:focus {
-    background-color: var(--second-background);
-    color: var(--title-text-color);
-}
-
-.hero .button {
     font-weight: 700; /*переназначаем для кнопки */
     font-size: 16px; /* переназначаем для кнопки */
     line-height: 1.88; /*в макете дизайнером указано значение в %*/
@@ -124,6 +104,14 @@ cursor: pointer;
     left: 700px;
     top: 430px;
 }
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: #188CE8;
+    color: #FFFFFF;
+}
+/* Buttons */
+
 /* Section */
 .section-title {
     color: var(--title-text-color);   
@@ -131,6 +119,7 @@ cursor: pointer;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    letter-spacing: 0.03em;
     
 }
 
@@ -138,28 +127,33 @@ cursor: pointer;
 .feature-list {
     font-size: 14px;
     line-height: 1.71;
-
+    list-style-type: none;
+    letter-spacing: 0.03em;
 }
 
-.feature-list .title {
+.feature-list-title {
     color: var(--title-text-color); 
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
 }
 
 /* Team */
-
 .team-list {
     font-size: 16px;
     line-height: 1.19;
     background-color: var(--second-background);
+    list-style-type: none;
+    letter-spacing: 0.03em;
 }
 
-.team-list .title {
+.team-list-title {
     color: var(--title-text-color);
     font-weight: 500; /* переназначаем */  
     font-size: 16px;
+    letter-spacing: 0.03em;
 }
 
 
@@ -172,32 +166,61 @@ cursor: pointer;
     letter-spacing: 0.03em;
 }
 
-.footer .logo {
+.footer-logo {
     color: #FFFFFF;
+    font-family: 'Raleway'; /*переназначаем шрифт*/
     font-weight: 700; /*переназначаем для Лого */
     font-size: 26px;  /*переназначаем для Лого */
-    line-height: 1.19; /* переназначаем для Лого */
-}
+    line-height: 1.2; /* переназначаем для Лого */
+    letter-spacing: 0.03em;
+    text-decoration: none;  
+  }
 
-.footer .contact {
+.address {
+    font-style: normal;
+} 
+.contact {
     color: var(--contact-text-color);
+    text-decoration: none;
 }
 
-.footer .contact:hover,
-.footer .contact:focus {
+.contact:hover,
+.contact:focus {
     color: var(--accent-color);
 }
 
-/*page portfolio without header, footer and buttons*/
+/*page portfolio without header and footer*/
  
-.projects .link{
+.button {
+    background-color: var(--second-background);
+    color: var(--title-text-color);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62; /* дизайнер оставил в макете значение в % */
+    cursor: pointer;
+    }
+    
+    .button:hover,
+    .button:focus {
+        background-color: var(--accent-color);
+        color: #FFFFFF;   
+    }
+    
+
+.projects {
+    list-style-type: none;
+}
+
+.projects-link{
     font-size: 16px;
     line-height: 1.88; /* в макете дизайнер указал значение 188% */
     color: var(--main-text-color);
-    
+    letter-spacing: 0.03em;
+    text-decoration: none;
 }
 
-.projects .title {
+.projects-title {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;

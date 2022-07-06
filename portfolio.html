@@ -10,20 +10,20 @@
 </head>
 <body>
     <header class="header">
-        <nav class="site-nav">
+        <nav>
           <a href="/" lang="en" class="logo">
               <span class="logo-part">Web</span>Studio
           </a>
       
-          <ul>
-              <li><a href="./index.html" class="link current">Студия</a></li>
-              <li><a href="./portfolio.html" class="link">Портфолио</a></li>
+          <ul class="list">
+              <li><a href="./index.html" class="link">Студия</a></li>
+              <li><a href="./portfolio.html" class="link current">Портфолио</a></li>
               <li><a href="" class="link">Контакты</a></li>
           </ul>
         </nav>
-          <ul>
-              <li><a href="mailto:info@devstudio.com" class="contact">info@devstudio.com</a></li>
-              <li><a href="tel:+380961111111" class="contact">+38 096 111 11 11</a></li>
+          <ul class="list">
+              <li><a href="mailto:info@devstudio.com" class="header-contact">info@devstudio.com</a></li>
+              <li><a href="tel:+380961111111" class="header-contact">+38 096 111 11 11</a></li>
           </ul>
     </header>
 
@@ -31,13 +31,13 @@
 <!-- секция с перечнем работ -->
 <section class="section">
     <!--we will hide this title later-->
-    <h1>Портфолио</h1>
+    <h1 hidden>Портфолио</h1>
     <!-- список с кнопками-->
-    <ul>
+    <ul class="list">
         <!--тут пока поставил клас primary чтобы кнопка была как на макете синей,
         но в дальнейшем как я понял этот класс уберется и будет динамическое
         назначение через JS -->
-        <li><button type="button" class="button primary">Все</button></li> 
+        <li><button type="button" class="button">Все</button></li> 
         <li><button type="button" class="button">Веб-сайты</button></li>
         <li><button type="button" class="button">Приложения</button></li>
         <li><button type="button" class="button">Дизайн</button></li>
@@ -47,26 +47,27 @@
 
 <!--список с готовыми проектами из портфолио-->
     <ul class="projects">
-        <li><a href="./" class="link"><img src="./images/website_tehnokryak.jpg" alt="работа по созданию веб-сайта Технокряк" width="370"><h2 class="title">Технокряк</h2><p>Веб-сайт</p></a></li>
-        <li><a href="./" class="link"><img src="./images/design_poster_nba.jpg" alt="работа по созданию постера к матчу НБА" width="370"><h2 class="title">Постер <span lang="en">New Orlean vs Golden Star</span></h2><p>Дизайн</p></a></li>
-        <li><a href="./" class="link"><img src="./images/app_restaurant.jpg" alt="работа по созданию приложения для ресторана морепродуктов" width="370"><h2 class="title">Ресторан <span lang="en">Seafood</span></h2><p>Приложение</p></a></li>
-        <li><a href="./" class="link"><img src="./images/marketing_project_prime.jpg" alt="работа по созданию проэкта Основной" width="370"><h2 class="title">Проект <span lang="en">Prime</span></h2><p>Маркетинг</p></a></li>
-        <li><a href="./" class="link"><img src="./images/app_project_box.jpg" alt="работа по созданию приложения для проэкта Коробки" width="370"><h2 class="title">Проект <span lang="en">Boxes</span></h2><p>Приложение</p></a></li>
-        <li><a href="./" class="link"><img src="./images/website_inspiration.jpg" alt="работа по созданию сайта Вдохновение не имеет границ" width="370"><h2 class="title" lang="en">Inspiration has no Borders</h2><p>Веб-сайт</p></a></li>
-        <li><a href="./" class="link"><img src="./images/design_limited_edition.jpg" alt="работа по созданию дизайна для издания Ограниченный випуск" width="370"><h2 class="title">Издание <span lang="en">Limited Edition</span></h2><p>Дизайн</p></a></li>
-        <li><a href="./" class="link"><img src="./images/marketing_project_lab.jpg" alt="работа по созданию проэкта ЛАБ" width="370"><h2 class="title">Проект <span lang="en">LAB</span></h2><p>Маркетинг</p></a></li>
-        <li><a href="./" class="link"><img src="./images/app_growing_business.jpg" alt="работа по созданию приложения Растущий бизнес" width="370"><h2 class="title" lang="en">Growing Business</h2><p>Приложение</p></a></li>
+        <li><a href="./" class="projects-link"><img src="./images/website_tehnokryak.jpg" alt="работа по созданию веб-сайта Технокряк" width="370"><h2 class="projects-title">Технокряк</h2><p>Веб-сайт</p></a></li>
+        <li><a href="./" class="projects-link"><img src="./images/design_poster_nba.jpg" alt="работа по созданию постера к матчу НБА" width="370"><h2 class="projects-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2><p>Дизайн</p></a></li>
+        <li><a href="./" class="projects-link"><img src="./images/app_restaurant.jpg" alt="работа по созданию приложения для ресторана морепродуктов" width="370"><h2 class="projects-title">Ресторан <span lang="en">Seafood</span></h2><p>Приложение</p></a></li>
+        <li><a href="./" class="projects-link"><img src="./images/marketing_project_prime.jpg" alt="работа по созданию проэкта Основной" width="370"><h2 class="projects-title">Проект <span lang="en">Prime</span></h2><p>Маркетинг</p></a></li>
+        <li><a href="./" class="projects-link"><img src="./images/app_project_box.jpg" alt="работа по созданию приложения для проэкта Коробки" width="370"><h2 class="projects-title">Проект <span lang="en">Boxes</span></h2><p>Приложение</p></a></li>
+        <li><a href="./" class="projects-link"><img src="./images/website_inspiration.jpg" alt="работа по созданию сайта Вдохновение не имеет границ" width="370"><h2 class="projects-title" lang="en">Inspiration has no Borders</h2><p>Веб-сайт</p></a></li>
+        <li><a href="./" class="projects-link"><img src="./images/design_limited_edition.jpg" alt="работа по созданию дизайна для издания Ограниченный випуск" width="370"><h2 class="projects-title">Издание <span lang="en">Limited Edition</span></h2><p>Дизайн</p></a></li>
+        <li><a href="./" class="projects-link"><img src="./images/marketing_project_lab.jpg" alt="работа по созданию проэкта ЛАБ" width="370"><h2 class="projects-title">Проект <span lang="en">LAB</span></h2><p>Маркетинг</p></a></li>
+        <li><a href="./" class="projects-link"><img src="./images/app_growing_business.jpg" alt="работа по созданию приложения Растущий бизнес" width="370"><h2 class="projects-title" lang="en">Growing Business</h2><p>Приложение</p></a></li>
     </ul>
 </section>
     </main>
     
+    <!--Футер-->
     <footer class="footer">
-        <a href="/" lang="en" class="logo">
+        <a href="/" lang="en" class="footer-logo">
             <span class="logo-part">Web</span>Studio
         </a>
-        <address>
+        <address class="address">
             <p>г. Киев, пр-т Леси Украинки, 26</p>
-            <ul>
+            <ul class="list">
                 <li><a href="mailto:info@example.com" class="contact">info@example.com</a></li>
                 <li><a href="tel:+380991111111" class="contact">+38 099 111 11 11</a></li>
             </ul>
